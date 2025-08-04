@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Portfólio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Canvas para a chuva de código -->
+  <canvas id="matrixRain"></canvas>
+
+  <header>
+    <h1>Guilherme Santos</h1>
+    <p>Desenvolvedor Web | Criador de Projetos Open Source</p>
+  </header>
+
+  <div class="container">
+    <h2>Sobre Mim</h2>
+    <p>Olá! Sou Guilherme Santos, apaixonado por desenvolvimento web e criação de projetos open source. 
+    Neste site você encontra alguns dos meus principais trabalhos.</p>
+
+    <h2>Projetos</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>Projeto 1</h3>
+        <p>Descrição breve do projeto 1. Clique para ver mais detalhes no GitHub.</p>
+      </div>
+      <div class="project">
+        <h3>Projeto 2</h3>
+        <p>Descrição breve do projeto 2. Clique para ver mais detalhes no GitHub.</p>
+      </div>
+      <div class="project">
+        <h3>Projeto 3</h3>
+        <p>Descrição breve do projeto 3. Clique para ver mais detalhes no GitHub.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Guilherme Santos | <a href="#">Meu GitHub</a>
+  </footer>
+
+  <!-- Script da chuva de código -->
+  <script>
+    const canvas = document.getElementById('matrixRain');
+    const ctx = canvas.getContext('2d');
+
+    // Ajustar tamanho do canvas para a tela
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    // Conjunto de caracteres para a chuva
+    const letters = "01ABCDEFGHJKLMNOPQRSTUVWXYZあいうえおかきくけこ";
+    const lettersArr = letters.split("");
+
+    const fontSize = 16;
+    const columns = Math.floor(canvas.width / fontSize);
+    const drops = Array(columns).fill(1);
+
+    function draw() {
+      ctx.fillStyle = "rgba(0, 0, 0, 0.05)"; // Transparência
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.fillStyle = "#9b6ff3"; // Cor da chuva (neon roxo)
+      ctx.font = fontSize + "px monospace";
+
+      for (let i = 0; i < drops.length; i++) {
+        const text = lettersArr[Math.floor(Math.random() * lettersArr.length)];
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+          drops[i] = 0;
+        }
+        drops[i]++;
+      }
+    }
+
+    setInterval(draw, 35);
+
+    // Ajustar canvas ao redimensionar
+    window.addEventListener('resize', () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+  </script>
+</body>
+</html>
+
