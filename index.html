@@ -18,28 +18,64 @@
     <p>Desenvolvedor Web | Criador de Projetos Open Source</p>
   </header>
 
+  <!-- BLOCO SOBRE MIM -->
   <div class="container">
     <h2>Sobre Mim</h2>
     <p>Olá! Sou Guilherme Santos, apaixonado por desenvolvimento web e criação de projetos open source. 
     Neste site você encontra alguns dos meus principais trabalhos.</p>
+  </div>
 
+  <!-- BLOCO PROJETOS -->
+  <div class="container">
     <h2>Projetos</h2>
     <div class="projects">
-      <div class="project">
+      <a href="https://mrrobott.byethost10.com/?i=1" target="_blank" class="project">
         <h3>Projeto 1</h3>
-        <p>Descrição breve do projeto. Clique para ver mais detalhes no GitHub.</p>
-      </div>
-      <div class="project">
+        <p>Criação de layout de site de informática - CSS/HTML</p>
+      </a>
+      <a href="https://www.seusite2.com" target="_blank" class="project">
         <h3>Projeto 2</h3>
-        <p>Descrição breve do projeto 2. Clique para ver mais detalhes no GitHub.</p>
-      </div>
-      <div class="project">
+        <p>Descrição breve do projeto 2. Clique para ver mais detalhes.</p>
+      </a>
+      <a href="https://www.seusite3.com" target="_blank" class="project">
         <h3>Projeto 3</h3>
-        <p>Descrição breve do projeto 3. Clique para ver mais detalhes no GitHub.</p>
+        <p>Descrição breve do projeto 3. Clique para ver mais detalhes.</p>
+      </a>
+    </div>
+  </div>
+
+  <!-- BLOCO FORMAÇÃO E HABILIDADES -->
+  <div class="container">
+    <h2>Formação e Habilidades</h2>
+    <div class="projects single-block">
+      <div class="project">
+        <h3>Formação Acadêmica</h3>
+        <p>
+          • Técnico em Informática<br>
+          • Estudante de Desenvolvimento Web<br>
+          • Experiência em projetos pessoais e open source
+        </p>
+
+        <h3>Linguagens e Tecnologias</h3>
+        <p>
+          • HTML, CSS, JavaScript<br>
+          • Python, PHP, MySQL<br>
+          • Git e GitHub<br>
+          • Desenvolvimento de Sites e Aplicações Web
+        </p>
+
+        <h3>O que eu sei fazer</h3>
+        <p>
+          • Criação de sites responsivos<br>
+          • Animações e efeitos em JavaScript<br>
+          • Conexão com banco de dados<br>
+          • Manutenção e suporte em informática
+        </p>
       </div>
     </div>
   </div>
 
+  <!-- BLOCO CONTATO -->
   <div class="container">
     <h2>Contato</h2>
     <div class="about-section">
@@ -70,11 +106,9 @@
     const canvas = document.getElementById('matrixRain');
     const ctx = canvas.getContext('2d');
 
-    // Ajustar tamanho do canvas para a tela
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    // Conjunto de caracteres para a chuva
     const letters = "01ABCDEFGHJKLMNOPQRSTUVWXYZあいうえおかきくけこ";
     const lettersArr = letters.split("");
 
@@ -109,3 +143,5 @@
   </script>
 </body>
 </html>
+
+
