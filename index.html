@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meu Portfólio</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- Font Awesome para os ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
   <!-- Canvas para a chuva de código -->
@@ -37,6 +40,27 @@
     </div>
   </div>
 
+  <div class="container">
+    <h2>Contato</h2>
+    <div class="about-section">
+      <img src="perfil.jpeg" alt="Foto de Guilherme" class="profile-pic">
+      <div>
+        <p>Quer falar comigo? Você pode entrar em contato pelos seguintes canais:</p>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/_will_lf?igsh=dmJ6YnE0bDYxNWI4" target="_blank" class="icon instagram" title="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://wa.me/5593991378363" target="_blank" class="icon whatsapp" title="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="mailto:guilhermewilsonwilson@gmail.com" target="_blank" class="icon email" title="E-mail">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
   <footer>
     © 2025 Guilherme Santos | <a href="#">Meu GitHub</a>
   </footer>
@@ -59,10 +83,10 @@
     const drops = Array(columns).fill(1);
 
     function draw() {
-      ctx.fillStyle = "rgba(0, 0, 0, 0.05)"; // Transparência
+      ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      ctx.fillStyle = "#9b6ff3"; // Cor da chuva (neon roxo)
+      ctx.fillStyle = "#9b6ff3";
       ctx.font = fontSize + "px monospace";
 
       for (let i = 0; i < drops.length; i++) {
@@ -78,7 +102,6 @@
 
     setInterval(draw, 35);
 
-    // Ajustar canvas ao redimensionar
     window.addEventListener('resize', () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
@@ -86,4 +109,3 @@
   </script>
 </body>
 </html>
-
