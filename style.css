@@ -90,6 +90,7 @@ h2 {
   min-height: 150px; 
   text-decoration: none; /* remove sublinhado */
   color: inherit;        /* mantém cor do texto */
+  box-sizing: border-box; /* Garante que bordas e padding não distorçam o layout */
 }
 
 .project:hover {
@@ -105,7 +106,9 @@ h2 {
 
 /* ----- BLOCO ÚNICO ----- */
 .projects.single-block {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .projects.single-block .project {
@@ -196,3 +199,49 @@ footer a:hover {
 .icon.instagram:hover { color: #e1306c; }  
 .icon.whatsapp:hover { color: #25d366; }   
 .icon.email:hover { color: #ffcc00; }   
+
+/* ----------- RESPONSIVIDADE PARA CELULAR ----------- */
+@media screen and (max-width: 768px) {
+
+  body {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  header h1 {
+    font-size: 1.5em;
+  }
+
+  .container {
+    margin: 20px 10px;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.3em;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+  }
+
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+  }
+
+  .social-icons {
+    gap: 20px;
+    font-size: 1.8rem;
+  }
+
+  footer {
+    font-size: 0.9rem;
+  }
+}
